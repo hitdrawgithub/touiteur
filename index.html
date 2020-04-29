@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.css">
 </head>
-<body>
+<body class="overflow-hidden">
     <header class="site-header bg-info text-white">
         <div class="d-flex justify-content-between py-3 px-5">
             <h1>DWWM2020-1 Chat</h1>
@@ -28,14 +28,18 @@
             <div class="col-2 border">
                 gauche
             </div>
-            <div class="col-8 border ">
-                millieu
+            <div id="touit-zone" class="col-8 border d-flex flex-column vh-100 overflow-auto">
+                <div class="px-3 mt-3"> 
+                    <input type="text" name="name" id="name" placeholder="nickname"><br>
+                    <textarea name="message" id="message" rows="2" class="w-100" maxlength="256" placeholder="tape ton touit"></textarea>                  
+                    <button id="touit-send" class="btn btn-info float-right">paye ton touit</button>
+                </div>
             </div>
             <div class="col-2 border">
                 droite
             </div>
         </section>
     </main>
-    
+    <script src="/js/javascript.js"></script>
 </body>
 </html>
